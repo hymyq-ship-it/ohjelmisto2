@@ -1,41 +1,55 @@
-class Auto:
+from random import randint
 
+class Auto:
     def __init__(self, rekisteritunnus, huippunopeus):
         self.rekisteritunnus = rekisteritunnus
         self.huippunopeus = huippunopeus
-        self.tamanhetkinen_nopeus = 0
+        self.nopeus = 0
         self.kuljettu_matka = 0
 
-    def kiihdyta(self, nopeuden_muutos):
-        self.tamanhetkinen_nopeus += nopeuden_muutos
+    def kiihdyta(self, muutos):
+        self.nopeus += muutos
 
-        if self.tamanhetkinen_nopeus > self.huippunopeus:
-            self.tamanhetkinen_nopeus = self.huippunopeus
+        if self.nopeus > self.huippunopeus:
+            self.nopeus = self.huippunopeus
 
-        if self.tamanhetkinen_nopeus < 0:
-            self.tamanhetkinen_nopeus = 0
+        if self.nopeus < 0:
+            self.nopeus = 0
 
-    def kulje(self, aikaa):
-        self.kuljettu_matka += self.tamanhetkinen_nopeus * aikaa
+    def kulje(self, tunnit):
+        self.kuljettu_matka += self.nopeus * tunnit
 
 
-auto = Auto("ABC-123", 142)
+# Luodaan 10 autoa
+autot = []
 
-print("Rekisteritunnus:", auto.rekisteritunnus)
-print("Huippunopeus:", auto.huippunopeus)
-print("Nykyinen nopeus:", auto.tamanhetkinen_nopeus)
-print("Kuljettu matka:", auto.kuljettu_matka)
+for i in range(1, 11):
+    rekisteri = f"ABC-{i}"
+    huippunopeus = randint(100, 200)
+    auto = Auto(rekisteri, huippunopeus)
+    autot.append(auto)
 
-auto.kiihdyta(30)
-auto.kiihdyta(70)
-auto.kiihdyta(50)
+# Kilpailu alkaa
+kilpailu_paattynyt = False
 
-print("Nopeus kiihdytysten jälkeen:", auto.tamanhetkinen_nopeus)
+while not kilpailu_paattynyt:
 
-auto.kulje(1.5)
+    for auto in autot:
+        muutos = randint(-10, 15)
+        auto.kiihdyta(muutos)
+        auto.kulje(1)
 
-print("Kuljettu matka:", auto.kuljettu_matka)
+        if auto.kuljettu_matka >= 10000:
+            kilpailu_paattynyt = True
 
-auto.kiihdyta(-200)
+# Tulostetaan tulokset taulukkona
+print(f"{'Rekisteri':<12}{'Huippu':<10}{'Nopeus':<10}{'Matka':<12}")
+print("-" * 44)
 
-print("Nopeus hätäjarrutuksen jälkeen:", auto.tamanhetkinen_nopeus)
+for auto in autot:
+    print(
+        f"{auto.rekisteritunnus:<12}"
+        f"{auto.huippunopeus:<10}"
+        f"{auto.nopeus:<10}"
+        f"{auto.kuljettu_matka:.1f}"
+    )
