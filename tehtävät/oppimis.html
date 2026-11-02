@@ -1,0 +1,48 @@
+<!DOCTYPE html> #sanomme konelle että tämä sivu on html kielille
+<html lang="en"> #sivun kieli on engelantti
+<head>  # pää ohjelma tarpeet
+    <meta charset="UTF-8">  #määritelen että sivu käyttää UTF-8 merkistöä
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    # määrittelen että tämä sivu toimi puhelimella ja tabletssa myös
+    <title>Cat World</title> #sivun otsikko
+
+    <link rel="stylesheet" href="style.css"> #liitetään html tiedostoon css tiedosto
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> #Valmistautuu lataamaan Google-fontin
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> #Nopeuttaa fonttien lataamista.
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"> #فونت Poppins را از گوگل دانلود می‌کند.
+</head>
+<body> #تمام چیزهایی که در صفحه دیده می‌شوند اینجا قرار می‌گیرند.
+
+<header>
+    <h1>🐱 Cat World</h1>
+
+    <nav> #Navigointi alkaa.منوی سایت شروع می‌شود.
+        <a href="index.html">Home</a>
+        <a href="products.html">Cats</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero"> # Luodan uusi osio. Hero معمولاً قسمت بزرگ و اصلی بالای صفحه است.
+
+    <img src="images/hero.jpg" alt="Cat"> # Lisään hero osioon kuvan.
+
+    <div class="hero-text"> # Luodaan hero osioon tekstiä varten oma div.
+        <h2>Welcome to Cat World</h2>
+
+        <p>
+            Discover cute cats, beautiful photos and everything about our furry friends.
+        </p>
+
+        <a href="products.html" class="button">See Cats</a>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Cat World</p>
+</footer>
+
+</body>
+</html>
