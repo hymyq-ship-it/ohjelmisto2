@@ -6,11 +6,10 @@ function diceRoll() {
 
 let result;
 let html = '<ul>';
-
 do {
   result = diceRoll();
   html += `<li>${result}</li>`;
 } while (result !== 6);
-
 html += '</ul>';
-document.querySelector('body').innerHTML = html;
+
+document.querySelector('#target').innerHTML = html;

@@ -1,20 +1,16 @@
 'use strict';
 
 const dogs = [];
-
 for (let i = 0; i < 6; i++) {
-  const name = prompt(`Name of dog ${i + 1}:`);
-  dogs.push(name);
+  dogs.push(prompt(`Name of dog ${i + 1}:`));
 }
 
-// sort() -> aakkosjärjestys, reverse() kääntää sen
-// Tehtävässä ei kielletty reverse() käyttöä tässä, vain tehtävässä 1
-dogs.sort().reverse();
+dogs.sort();
 
 let html = '<ul>';
-for (const dog of dogs) {
-  html += `<li>${dog}</li>`;
+for (let i = dogs.length - 1; i >= 0; i--) {
+  html += `<li>${dogs[i]}</li>`;
 }
 html += '</ul>';
 
-document.querySelector('body').innerHTML = html;
+document.querySelector('#target').innerHTML = html;

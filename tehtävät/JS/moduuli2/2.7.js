@@ -7,11 +7,10 @@ function diceRoll(sides) {
 const sides = Number(prompt('How many sides on the dice?'));
 let result;
 let html = '<ul>';
-
 do {
   result = diceRoll(sides);
   html += `<li>${result}</li>`;
 } while (result !== sides);
-
 html += '</ul>';
-document.querySelector('body').innerHTML = html;
+
+document.querySelector('#target').innerHTML = html;

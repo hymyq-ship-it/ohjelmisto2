@@ -2,30 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tehtävä 5</title>
+  <title>Tehtävä 2.5</title>
+  <script src="2.5.js" defer></script>
 </head>
 <body>
-  <h1>Tehtävä 5</h1>
+  <h1>Tehtävä 2.5</h1>
   <p>Katso tulokset konsolista (F12 -&gt; Console)</p>
-
-  <script>
-    'use strict';
-    const numbers = [];
-    let duplicate = false;
-    while (!duplicate) {
-      const num = Number(prompt('Enter a number:'));
-      if (numbers.includes(num)) {
-        console.log(`Number ${num} has already been given.`);
-        duplicate = true;
-      } else {
-        numbers.push(num);
-      }
-    }
-    numbers.sort((a, b) => a - b);
-    console.log('All given numbers in ascending order:');
-    for (const n of numbers) {
-      console.log(n);
-    }
-  </script>
 </body>
 </html>
