@@ -1,7 +1,9 @@
-pituus = int(input("Anna kuhan pituus senttimetreinä: "))
-
-if pituus < 37:
-    puuttuu = 37 - pituus
-    print(f"Laske kuha takaisin järveen! Alimmasta sallitusta pyyntimitasta puuttuu {puuttuu} cm.")
-else:
-    print("Kuha on mitallinen.")
+function tarkista() {
+  const p = Number(document.getElementById("pituus").value);
+  if (p < 37) {
+    document.getElementById("tulos").textContent =
+      `Laske kuha takaisin järveen! Alimmasta sallitusta pyyntimitasta puuttuu ${37 - p} cm.`;
+  } else {
+    document.getElementById("tulos").textContent = "Kuha on mitallinen.";
+  }
+}
