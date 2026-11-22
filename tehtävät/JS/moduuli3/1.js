@@ -1,9 +1,7 @@
-function tarkista() {
-  const p = Number(document.getElementById("pituus").value);
-  if (p < 37) {
-    document.getElementById("tulos").textContent =
-      `Laske kuha takaisin järveen! Alimmasta sallitusta pyyntimitasta puuttuu ${37 - p} cm.`;
-  } else {
-    document.getElementById("tulos").textContent = "Kuha on mitallinen.";
-  }
-}
+const target = document.getElementById('target');
+target.innerHTML = `
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+`;
+target.classList.add('my-list');

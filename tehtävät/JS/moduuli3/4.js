@@ -1,6 +1,10 @@
-function tarkista() {
-  const v = Number(document.getElementById("vuosi").value);
-  const onKarkaus = (v % 4 === 0 && v % 100 !== 0) || (v % 400 === 0);
-  document.getElementById("tulos").textContent =
-    onKarkaus ? `Vuosi ${v} on karkausvuosi.` : `Vuosi ${v} ei ole karkausvuosi.`;
+// students-taulukko tulee valmiina, esim. [{id:'2345768', name:'John'}, ...]
+// Jos se on eri muodossa, kerro niin korjaan.
+const target = document.getElementById('target');
+
+for (let i = 0; i < students.length; i++) {
+  const option = document.createElement('option');
+  option.value = students[i].id;
+  option.textContent = students[i].name;
+  target.appendChild(option);
 }
