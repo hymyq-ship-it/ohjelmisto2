@@ -1,12 +1,12 @@
+"use strict";
+console.log('hello');
 
-//
-console.log('hello')
+alert
 
-alart('hei')
 
 const name= 'huma';
 
 let nimi= 'huma';
 nimi='sara'
 
-console.log(nimi)
+console.log(nimi);
