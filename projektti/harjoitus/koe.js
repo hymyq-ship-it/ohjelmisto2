@@ -1,8 +1,6 @@
-"use strict";
+'use strict';
 console.log('hello');
-
-alert
-
+alert('hello')
 
 const name= 'huma';
 
