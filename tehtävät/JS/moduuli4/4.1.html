@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4.1 TVMaze haku</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="4.1.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>4.1 TV-sarjan haku - TVMaze</h1>
+    <p>Hae TV-sarjaa nimellä. Tulokset tulostuvat myös konsoliin.</p>
+
+    <form id="search-form" action="https://api.tvmaze.com/search/shows">
+      <label for="query">Sarjan nimi:</label>
+      <input id="query" name="q" type="text" placeholder="esim. Breaking Bad" required>
+      <input type="submit" value="Search">
+    </form>
+
+    <p id="status"></p>
+    <div id="results"></div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4.3 Reitti koululle - Digitransit</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="4.3.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>4.3 Reitti koululle - Digitransit</h1>
+    <p>Kohde: Karaportti 2, Espoo</p>
+
+    <form id="route-form">
+      <label for="address">Lähtöosoite:</label>
+      <input id="address" name="address" type="text" placeholder="esim. Rautatientori, Helsinki" required>
+      <input type="submit" value="Näytä reitti">
+    </form>
+
+    <p id="status"></p>
+    <div id="trip-info"></div>
+    <div id="map" style="height: 480px; margin-top: 16px;"></div>
+    <div id="legs"></div>
+  </main>
+</body>
+</html>
